@@ -54,7 +54,7 @@ export class HikvisionApi {
   }
 
   async getCameras() {
-    const channels = await this._getResponse('/ISAPI/System/Video/inputs/channels');
+    const channels = await this._getResponse('ISAPI/Streaming/channels');
 
     for (let i = 0; i < channels.VideoInputChannelList.VideoInputChannel.length; i++) {
       const channel = channels.VideoInputChannelList.VideoInputChannel[i];
